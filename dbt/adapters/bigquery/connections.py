@@ -374,7 +374,7 @@ class BigQueryConnectionManager(BaseConnectionManager):
         execution_project = profile_credentials.execution_project
         location = getattr(profile_credentials, "location", None)
 
-        info = client_info.ClientInfo(user_agent=f"dbt-bigquery-{dbt_version.version}")
+        info = client_info.ClientInfo(user_agent='Snowplow BDP/dbt-bigquery (GPN:Snowplow;)')
         return google.cloud.bigquery.Client(
             execution_project,
             creds,
